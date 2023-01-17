@@ -1,6 +1,15 @@
 <app-sub-header [iconImg]="imgFolder" title="Lista de clientes">
   <button class="btn btn--primary">
     <fa-icon [icon]="iconPlus"></fa-icon>
-    Novo
+    novo
   </button>
 </app-sub-header>
+
+<section *ngFor="let client of clientList">
+  <h2>{{ client.name }}</h2>
+  <p>{{ client.cnpj }}</p>
+  <app-status [isEnabled]="statusToBoolean(client.status)" [text]="client.status" />
+  <button class="btn btn--warning">
+    editar
+  </button>
+</section>

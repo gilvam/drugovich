@@ -1,0 +1,18 @@
+$diameter: 14px;
+
+:host {
+  display: flex;
+  min-width: 72px;
+
+  i {
+    border-radius: $diameter;
+    background: #ddd;
+    height: $diameter;
+    width: $diameter;
+    margin: 0 5px;
+  }
+
+  P {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,41 @@
+:host {
+  section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: space-between;
+    background: #fff;
+    padding: 8px;
+    margin-bottom: 7px;
+
+    h2 {
+      flex: 2;
+      flex-basis: 100%;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 12px;
+      flex: 1;
+    }
+
+    app-status {
+      flex: 1;
+    }
+
+    button {
+      margin-left: auto;
+    }
+
+    @media (min-width: 480px) {
+      h2 {
+        flex-basis: 0;
+      }
+      button {
+        margin-left: unset;
+      }
+    }
+  }
+}

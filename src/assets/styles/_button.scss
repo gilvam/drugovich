@@ -2,6 +2,10 @@ $primary: #4486ea;
 $primary-dark: darken($primary, 5%);
 $primary-dark-strong: darken($primary, 13%);
 
+$warning: #e18f53;
+$warning-dark: darken($warning, 5%);
+$warning-dark-strong: darken($warning, 13%);
+
 .btn {
   border-radius: 5px;
   height: 34px;
@@ -19,6 +23,19 @@ $primary-dark-strong: darken($primary, 13%);
 
     &:active {
       background: $primary-dark-strong;
+    }
+  }
+
+  &--warning {
+    background: $warning;
+    color: white;
+
+    &:hover {
+      background: $warning-dark;
+    }
+
+    &:active {
+      background: $warning-dark-strong;
     }
   }
 
