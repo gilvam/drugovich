@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #e5e5e5;
+
+  padding: 20px;
+
+  @media (min-width: 480px) {
+    padding: 30px;
+  }
+
+  @media (min-width: 576px) {
+    padding: 40px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 70px;
+  }
+}

@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+
+  div {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    h1 {
+      font-family: "Monda", sans-serif;
+      font-size: 27px;
+      line-height: 44px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$primary: #4486ea;
+$primary-dark: darken($primary, 5%);
+$primary-dark-strong: darken($primary, 13%);
+
+.btn {
+  border-radius: 5px;
+  height: 34px;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  border: none;
+
+  &--primary {
+    background: $primary;
+    color: white;
+
+    &:hover {
+      background: $primary-dark;
+    }
+
+    &:active {
+      background: $primary-dark-strong;
+    }
+  }
+
+  > fa-icon {
+    margin-right: 3px;
+  }
+}
