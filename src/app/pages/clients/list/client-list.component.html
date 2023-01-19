@@ -1,15 +1,17 @@
 <app-sub-header [iconImg]="imgFolder" title="Lista de clientes">
-  <button class="btn btn--primary">
+  <button class="btn btn--primary" (click)="goToNew()">
     <fa-icon [icon]="iconPlus"></fa-icon>
     novo
   </button>
 </app-sub-header>
 
-<section *ngFor="let client of clientList">
+<section *ngFor="let client of $clientList | async">
   <h2>{{ client.name }}</h2>
-  <p>{{ client.cnpj }}</p>
-  <app-status [isEnabled]="statusToBoolean(client.status)" [text]="client.status" />
-  <button class="btn btn--warning">
-    editar
-  </button>
+  <p>{{ client.cnpj | cnpj }}</p>
+  <app-status [isEnabled]="statusToBoolean(client.status)" [text]="client.status"/>
+  <button class="btn btn--warning"> editar</button>
 </section>
+
+<p *ngIf="($clientList| async) as list">
+  <small>Exibindo {{ list.length }} de {{ list.length }} clientes</small>
+</p>

@@ -1,0 +1,17 @@
+form {
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  input,
+  select {
+    border: 1px solid #e5e5e5;
+    font-size: 15px;
+    padding: 8px;
+    color: #6d6262;
+    margin-bottom: 20px;
+  }
+}

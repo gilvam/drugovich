@@ -5,13 +5,17 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./list/client-list.module').then(m => m.ClientListModule),
-  }
+      import('./list/client-list.module').then((m) => m.ClientListModule),
+  },
+  {
+    path: 'new',
+    loadChildren: () =>
+      import('./new/client-new.module').then((m) => m.ClientNewModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ClientsRoutingModule {
-}
+export class ClientsRoutingModule {}

@@ -6,6 +6,10 @@ $warning: #e18f53;
 $warning-dark: darken($warning, 5%);
 $warning-dark-strong: darken($warning, 13%);
 
+$success: #3ab72f;
+$success-dark: darken($success, 5%);
+$success-dark-strong: darken($success, 13%);
+
 .btn {
   border-radius: 5px;
   height: 34px;
@@ -36,6 +40,19 @@ $warning-dark-strong: darken($warning, 13%);
 
     &:active {
       background: $warning-dark-strong;
+    }
+  }
+
+  &--success {
+    background: $success;
+    color: white;
+
+    &:hover {
+      background: $success-dark;
+    }
+
+    &:active {
+      background: $success-dark-strong;
     }
   }
 

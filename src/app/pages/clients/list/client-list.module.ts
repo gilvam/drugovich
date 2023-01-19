@@ -6,9 +6,10 @@ import { ClientListComponent } from './client-list.component';
 import { SubHeaderModule } from '../../_shared/components/sub-header/sub-header.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StatusModule } from '../../_shared/components/status/status.module';
+import { CnpjPipe } from '../../../core/pipes/cnpj.pipe';
 
 @NgModule({
-  declarations: [ClientListComponent],
+  declarations: [ClientListComponent, CnpjPipe],
   imports: [
     CommonModule,
     ClientListRoutingModule,
@@ -16,5 +17,6 @@ import { StatusModule } from '../../_shared/components/status/status.module';
     FontAwesomeModule,
     StatusModule,
   ],
+  providers: [],
 })
 export class ClientListModule {}

@@ -1,0 +1,33 @@
+:host {
+  form {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 312px;
+
+    label {
+      width: 100%;
+
+      &.error {
+        input {
+          border: 1px solid darkred;
+
+          & + p {
+            margin-top: -24px;
+            display: table-column-group;
+            visibility: initial;
+          }
+        }
+      }
+
+      p {
+        color: darkred;
+        font-size: 12px;
+        display: none;
+        visibility: hidden;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<app-sub-header [iconImg]="imgFolder" title="Novo cliente"/>
+
+<form [formGroup]="form" (submit)="submit()">
+  <label [class.error]="isInvalid(form.controls.name)">
+    Nome
+    <input formControlName="name"/>
+    <p>{{ formError(form.controls.name) }}</p>
+  </label>
+
+  <label [class.error]="isInvalid(form.controls.cnpj)">
+    CNPJ
+    <input formControlName="cnpj" mask="00.000.000/0000-00"/>
+    <p>{{ formError(form.controls.cnpj) }}</p>
+  </label>
+
+  <label>
+    Status
+    <select formControlName="status">
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+    </select>
+  </label>
+
+  <button class="btn btn--success" type="submit">Salvar</button>
+</form>

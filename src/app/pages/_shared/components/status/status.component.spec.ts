@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StatusComponent } from './status.component';
+import { SubHeaderModule } from '../sub-header/sub-header.module';
+import { HeaderModule } from '../../../../core/components/header/header.module';
+import { StatusTypeDirective } from './_shared/directives/status-type.directive';
 
 describe('StatusComponent', () => {
   let component: StatusComponent;
@@ -8,9 +11,9 @@ describe('StatusComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatusComponent ]
-    })
-    .compileComponents();
+      declarations: [StatusComponent, StatusTypeDirective],
+      imports: [SubHeaderModule, HeaderModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(StatusComponent);
     component = fixture.componentInstance;
